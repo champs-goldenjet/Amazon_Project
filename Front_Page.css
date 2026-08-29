@@ -1,0 +1,228 @@
+/* General CSS */
+
+body{
+    padding: 0 0;
+    font-family: Roboto , Arial;
+    margin-top: 40px;
+}
+
+
+/* Header CSS */
+
+header{
+    background-color: #131921;
+    height: 60px;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    justify-content: space-between;
+}
+
+.leftSection , .midSection , .rightSection {
+    display: flex;
+}
+
+.leftSection{
+    width: 180px;
+}
+
+.frontPageLink , .ordersLink , .cartLink{
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.frontPageLink:hover , .ordersLink:hover , .cartLink:hover{
+    border: 1px solid white;
+}
+
+
+.frontPageLink{
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amazonLogo{
+    display: block;
+    margin-top: 5px;
+}
+
+.amazonLogoFull{
+    width: 100px;
+}
+
+.amazonLogoShort{
+    display: none;
+    width: 38px;
+}
+
+@media (max-width: 700px) {
+    .leftSection{
+        width: auto;
+    }
+
+    .frontPageLink{
+        padding: 8px 6px;
+    }
+
+    .amazonLogoFull{
+        display: none;
+    }
+
+    .amazonLogoShort{
+        display: block;
+    }
+}
+
+.midSection{
+    flex: 1;
+    max-width: 850px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+input{
+    height: 34px;
+    width: 0;
+    padding-left: 15px;
+    font-size: 16px;
+    flex: 1;
+    border-radius: 4px 0 0 4px;
+    border-right:none;
+    border: 2px solid rgb(240, 136, 4);;
+}
+
+.searchButtonFP{
+    background-color: rgb(240, 136, 4);;
+    border: 2px solid rgb(240, 136, 4);;
+    width: 45px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+}
+
+.searchIcon{
+    height: 20px;
+}
+
+.rightSection{
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.ordersLink{
+    padding: 6px;
+    text-decoration: none;
+}
+
+.returns{
+    display: block;
+    color: white;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.and-orders{
+    display: block;
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+}
+
+.cartLink{
+    display: flex;
+    color: white;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cartCount{
+    position: absolute;
+    font-weight: 700;
+    top: 5px;
+    left: 26px;
+    color: rgb(240, 136, 4);
+    font-size: 16px;
+    width: 26px;
+    text-align: center;
+}
+ 
+.cartWord{
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 12px;
+}
+
+.cartImg{
+    width: 50px;
+}
+
+/* frontpageMain CSS */
+
+.productsSection{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+    grid-gap: 20px;
+    margin-top: 80px;
+}
+
+.productContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    padding: 40px 25px 25px 24px;
+    /* border: 1px solid rgb(240, 136, 4); */
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgb(153, 151, 151);
+}
+
+.PimageDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+}
+
+.productImage{
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.name-of-product{
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    height: 35px;
+}
+
+.how-many-DUW{
+    color: rgb(33, 33, 33);
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(213, 217, 217);
+    border-radius: 8px;
+    padding: 5px 8px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+
+.add2CartButton{
+    background-color:rgb(255, 213, 0);
+    margin-top: 20px;
+    border: none;
+    color: black;
+    padding: 10px 90px;
+    border-radius: 20px;
+    cursor: pointer;
+}

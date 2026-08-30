@@ -206,6 +206,23 @@ input{
     height: 35px;
 }
 
+.ratings{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.ratingStars{
+    width: 100px;
+    height: 20px;
+}
+
+.ratingsCount{
+    color: #017cb6;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
 .how-many-DUW{
     color: rgb(33, 33, 33);
     background-color: rgb(240, 240, 240);

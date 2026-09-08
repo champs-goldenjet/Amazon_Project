@@ -1,31 +1,38 @@
+// Dispalaying products on the front page
 const productsData = [ 
 
-    { image : 'frontPageAssets/athletic-cotton-socks-6-pairs.jpg',
+    { image : 'BAmazonImages/products/athletic-cotton-socks-6-pairs.jpg',
+      id : 1,
       name : 'Black and Gray Athletic Cotton Socks - 6 Pairs',  
       rating : { stars : 45, count : 87 } ,
       price : 1090    },
 
-    { image : 'frontPageAssets/intermediate-composite-basketball.jpg',
+    { image : 'BAmazonImages/products/intermediate-composite-basketball.jpg',
+      id : 2,
       name : 'size 5 basketball',
       rating : { stars : 45, count : 127 } ,
       price : 2095     } ,
 
-    { image : 'frontPageAssets/adults-plain-cotton-tshirt-2-pack-teal.jpg',
+    { image : 'BAmazonImages/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
+      id : 3,
       name : 'Adults Plain Cotton T-Shirt 2 Pack',
       rating : { stars : 45, count : 56 } ,  
       price : 799    } ,
 
-    { image : 'frontPageAssets/black-2-slot-toaster.jpg',
+    { image : 'BAmazonImages/products/black-2-slot-toaster.jpg',
+      id : 4,
       name : 'Black 2-Slot Toaster',
       rating : { stars : 50, count : 2197 } ,  
       price : 1899    } ,
 
-    { image : 'frontPageAssets/6-piece-white-dinner-plate-set.jpg',
+    { image : 'BAmazonImages/products/6-piece-white-dinner-plate-set.jpg',
+      id : 5,
       name : '6-Piece White Dinner Plate Set',
       rating : { stars : 40, count : 37 } ,  
       price : 2067    } ,
     
-    { image : 'frontPageAssets/luxury-tower-set-6-piece.jpg',
+    { image : 'BAmazonImages/products/luxury-tower-set-6-piece.jpg',
+      id : 6,
       name : 'Luxury Towel Set - Graphite Grey',
       rating : { stars : 45, count : 144 } ,  
       price : 3599    }
@@ -34,7 +41,8 @@ const productsData = [
 let productsHTML = '';
 
 productsData.forEach((product) => {
-    productsHTML += `        <div class="productContainer">
+    productsHTML +=
+     `<div class="productContainer">
           <div class="PimageDiv">
             <img
               src="${product.image}"
@@ -64,8 +72,49 @@ productsData.forEach((product) => {
             <option value="5">5</option>
           </select>
 
-          <button class="add2CartButton">Add to cart</button>
-        </div>`;
+          <div class="add2CartButtonDiv">
+            <div class="checkMarkDiv">
+              <img src="BAmazonImages/icons/checkmark.png" alt="" class="checkMark" />
+              Added
+            </div>
+            <button class="add2CartButton" data-product-id="${product.id}">Add to cart</button>
+          </div>
+      </div>`;
 });
 
 document.querySelector('.jsProductsGrid').innerHTML = productsHTML;
+
+// Add to cart button functionality
+
+const cartBasket = [];
+
+document.querySelectorAll('.add2CartButton').forEach((buttonItem) => {
+  buttonItem.addEventListener('click', () => {
+
+    const selectedProductId = buttonItem.dataset.productId;
+
+    const selectedProductCheckMarkDiv = buttonItem
+      .closest('.productContainer')
+      .querySelector('.checkMarkDiv'); // Selects the checkmark div of the product that was added to the cart
+
+    let matchingCartItem ;
+
+    cartBasket.forEach((cartItem) => { 
+      if (cartItem.productId === selectedProductId) { matchingCartItem = cartItem; } });
+    
+    if (matchingCartItem) {  matchingCartItem.quantity ++;  }
+
+    else {  cartBasket.push({ productId: selectedProductId , quantity: 1 });  } 
+      console.log(cartBasket); 
+            
+      // Displaying cartquantity on the cart icon
+      let cartQuantity = 0;
+      cartBasket.forEach((goods) => { cartQuantity += goods.quantity; });
+      document.querySelector('.cartCount').innerHTML = cartQuantity;
+
+      selectedProductCheckMarkDiv.classList.add('showCheckMark'); // Displays the checkmark when the product is added to the cart
+    }); 
+    
+  }); 
+
+  

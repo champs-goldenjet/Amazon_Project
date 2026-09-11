@@ -97,15 +97,15 @@ document.querySelectorAll('.add2CartButton').forEach((buttonItem) => {
       .closest('.productContainer')
       .querySelector('.checkMarkDiv'); // Selects the checkmark div of the product that was added to the cart
 
+// Taking the info of the selectedProduct whilst checking if it already exists in the cartBasket array
     let matchingCartItem ;
 
     cartBasket.forEach((cartItem) => { 
-      if (cartItem.productId === selectedProductId) { matchingCartItem = cartItem; } });
+    if (cartItem.productId === selectedProductId) { matchingCartItem = cartItem; } });
     
-    if (matchingCartItem) {  matchingCartItem.quantity ++;  }
+    if (matchingCartItem) {  matchingCartItem.quantity++;  }
 
     else {  cartBasket.push({ productId: selectedProductId , quantity: 1 });  } 
-      console.log(cartBasket); 
             
       // Displaying cartquantity on the cart icon
       let cartQuantity = 0;
@@ -116,5 +116,3 @@ document.querySelectorAll('.add2CartButton').forEach((buttonItem) => {
     }); 
     
   }); 
-
-  

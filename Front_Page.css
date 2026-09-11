@@ -275,3 +275,7 @@ input{
 .add2CartButton:hover{
     background-color: rgb(255, 255, 0);
 }
+
+.add2CartButton:active{
+    background-color: rgb(196, 230, 44);
+}

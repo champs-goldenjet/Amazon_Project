@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bonge's Amazon Cart</title>
-    <link rel="stylesheet" href="Cart.css" />
+    <link rel="stylesheet" href="GeneralCart.css" />
+    <link rel="stylesheet" href="CartHeader.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,74 +42,116 @@
     </header>
 
     <main>
-      <section class="orderReview">
-        <span class="orderReviewHeading">Review your order</span>
+      <div class="pageTitle">Review your order</div>
+      <section class="main-grid">
+        <div class="orderReview">
+          <div class="itemCard">
+            <div class="deliveryDate">
+              Delivery Date: Tuesday, September 22, 2026
+            </div>
 
-        <div class="itemCard">
-          <div class="deliveryDate">
-            Delivery Date: Tuesday, September 22, 2026
-          </div>
-
-          <div class="threePartDiv">
-            <div class="imageSec">
+            <div class="threePartDiv">
               <img
                 src="..\BAmazonImages/products/athletic-cotton-socks-6-pairs.jpg"
                 alt=""
                 class="itemCardImage"
               />
-            </div>
 
-            <div class="itemDetails">
-              <div class="nameOfItem">
-                Black and Gray Athletic Cotton Socks - 6 Pairs
-              </div>
-              <div class="itemPrice">Price: $12.99</div>
-              <div class="itemQuantity">
-                Quantity: 1
-                <span class="updateLink">Update</span>
-                <span class="deleteLink">Delete</span>
-              </div>
-            </div>
+              <div class="itemDetails">
+                <div class="nameOfItem">
+                  Black and Gray Athletic Cotton Socks - 6 Pairs
+                </div>
+                <div class="itemPrice">Price: $12.99</div>
 
-            <div class="deliveryOptions">
-              <div class="deliveryHeading">Choose a delivery option:</div>
-
-              <div class="deliveryOption">
-                <input
-                  type="radio"
-                  name="deliveryOptionInput"
-                  id="deliveryOption1"
-                  checked
-                />
-                <label for="deliveryOption1">Tuesday, September 22</label>
-                <span class="shipping">FREE Shipping</span>
+                <div class="itemQuantity">
+                  Quantity:
+                  <span class="Js-quantity-selector">1</span>
+                  <input type="number" class="new-quantity-input" value="1" />
+                  <span class="update-quantityLink">update</span>
+                  <span class="saveLink">Save</span>
+                  <span class="deleteLink">Delete</span>
+                </div>
               </div>
 
-              <div class="deliveryOption">
-                <input
-                  type="radio"
-                  name="deliveryOptionInput"
-                  id="deliveryOption2"
-                />
-                <label for="deliveryOption2">Wednesday, September 16</label>
-                <span class="shipping">$4.99 - Shipping</span>
-              </div>
+              <div class="deliveryOptions">
+                <div class="deliveryHeading">Choose a delivery option:</div>
 
-              <div class="deliveryOption">
-                <input
-                  type="radio"
-                  name="deliveryOptionInput"
-                  id="deliveryOption3"
-                />
-                <label for="deliveryOption3">Monday, September 14</label>
-                <span class="shipping">$9.99 - Shipping</span>
+                <div class="deliveryOption">
+                  <input
+                    type="radio"
+                    name="deliveryOptionRadioInput"
+                    id="deliveryOption1"
+                    checked
+                  />
+                  <div>
+                    <div class="deliveryOptionDate">Tuesday, September 22</div>
+                    <div class="shipping">FREE Shipping</div>
+                  </div>
+                </div>
+
+                <div class="deliveryOption">
+                  <input
+                    type="radio"
+                    name="deliveryOptionRadioInput"
+                    id="deliveryOption2"
+                  />
+                  <div>
+                    <div class="deliveryOptionDate">
+                      Wednesday, September 16
+                    </div>
+                    <div class="shipping">$4.99 - Shipping</div>
+                  </div>
+                </div>
+
+                <div class="deliveryOption">
+                  <input
+                    type="radio"
+                    name="deliveryOptionRadioInput"
+                    id="deliveryOption3"
+                  />
+                  <div>
+                    <div class="deliveryOptionDate">Monday, September 14</div>
+                    <div class="shipping">$9.99 - Shipping</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section class="orderSummary"></section>
+        <div class="orderSummary">
+          <div class="summaryInfo">
+            <div class="summary-title">Order Summary</div>
+
+            <div class="row-info">
+              <div>Items(6):</div>
+              <div class="numbers-section">$227.75</div>
+            </div>
+
+            <div class="row-info">
+              <div>Shipping & handling:</div>
+              <div class="numbers-section">$0.00</div>
+            </div>
+
+            <!-- short underline part -->
+            <div class="row-info subtotalRow">
+              <div>Total before tax:</div>
+              <div class="numbers-section subtotal">$227.75</div>
+            </div>
+
+            <div class="row-info">
+              <div>Estimated tax(10%):</div>
+              <div class="numbers-section">$22.78</div>
+            </div>
+
+            <div class="row-info totalRow">
+              <div>Order total:</div>
+              <div class="numbers-section">$250.53</div>
+            </div>
+          </div>
+          <button class="summary-button">Place your order</button>
+        </div>
+      </section>
     </main>
   </body>
 </html>

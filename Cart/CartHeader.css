@@ -1,0 +1,63 @@
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  z-index: 100;
+}
+
+.headerDiv {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+leftSection, .midSection, .rightSection {
+  /* display: flex; */
+}
+
+.leftSection {
+  width: 150px;
+}
+
+.frontpage-link {
+    cursor: pointer;
+}
+
+.cartPageAmazonlogo {
+    width: 100px;
+    height: auto;
+    margin-top: 12px;
+}
+
+.midSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+}   
+
+.itemsFrontPageLink {
+  text-decoration: none;
+  color: rgb(0,113,113);
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.rightSection {
+  /* display: flex; */
+  /* align-items: start; */
+  /* justify-content: flex-end; */
+  text-align: end;
+  width: 150px;
+}

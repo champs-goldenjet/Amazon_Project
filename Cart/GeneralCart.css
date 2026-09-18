@@ -1,0 +1,187 @@
+/* General CSS */
+body {
+  font-family: Roboto, Arial;
+  margin: 0;
+  padding: 0;
+  background-color: beige;
+  color: rgb(33, 33, 33);
+  /* margin:80px 100px 0 80px; */
+}
+
+main {
+  max-width: 1100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 140px auto 100px auto;
+}
+
+/* Header Styles */
+
+/* MainSection Styles */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  column-gap: 12px;
+  align-items: start;
+}
+
+.pageTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.itemCard , .orderSummary {
+  /* display: flex; */
+  margin-bottom: 12px;
+  background-color: white;
+  /* padding: 20px 60px 15px 15px; */
+  padding: 18px;
+  border: 1px solid rgb(222, 222 , 222);
+  border-radius: 4px;
+}
+
+.deliveryDate {
+  font-size: 19px;
+  color: rgb(0, 118, 0);
+  margin-bottom: 22px;
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+.threePartDiv {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  column-gap: 25px;
+}
+
+.itemCardImage {
+  max-width: 100%;
+  max-height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nameOfItem {
+  /* font-size: 16px; */
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.itemPrice {
+  /* font-size: 16px; */
+  font-weight: 700;
+  color: rgb(177, 39, 4);
+  margin-bottom: 5px;
+}
+
+.new-quantity-input{
+  display: none;
+  width: 50px;
+  font-size: 16px;
+}
+
+.saveLink{
+  display: none;
+}
+
+.update-quantityLink, .deleteLink , .saveLink {
+  color: #017cb6;
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+.update-quantityLink:hover, .deleteLink:hover,
+ .saveLink:hover{
+  color: red;
+}
+
+.deliveryHeading{
+  /* font-size: 17px; */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.deliveryOption {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.deliveryOptionRadioInput{
+  margin-left: 0;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.deliveryOptionDate{
+  color: rgb(0, 118, 0);
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.shipping {
+  color: rgb(120, 120, 120);
+  font-size: 15px;
+}
+
+/* Order Summary Styles */
+/* 
+.orderSummary {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  max-width: 300px;
+} */
+
+.summary-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.row-info{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 9px;
+  font-size: 15px;
+}
+
+.numbers-Section {
+  text-align: right;
+}
+
+.subtotal{
+  border-top: 1px solid rgb(222, 222 , 222);
+  /* padding-top: 9px; */
+}
+
+.subtotalRow div{
+  padding-top: 9px;
+}
+
+.totalRow{
+  color: rgb(177, 39, 4);
+  border-top: 1px solid rgb(222, 222 , 222);
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 18px;
+}
+
+.summary-button {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 8px;
+  margin-bottom: 19px;
+  margin-top: 20px;
+  width: 100%;
+
+  background-color: rgb(255,216,20);
+  color: rgb(33, 33, 33);
+  cursor: pointer;
+  border: rgb(252,210,0);
+  box-shadow: 0 2px 5px rgba(213,217,217, 0.5);
+}

@@ -19,10 +19,6 @@ header {
   max-width: 1100px;
 }
 
-leftSection, .midSection, .rightSection {
-  /* display: flex; */
-}
-
 .leftSection {
   width: 150px;
 }
@@ -31,10 +27,29 @@ leftSection, .midSection, .rightSection {
     cursor: pointer;
 }
 
-.cartPageAmazonlogo {
+.blackFullAmazonlogo {
     width: 100px;
-    height: auto;
     margin-top: 12px;
+}
+
+.blackShortAmazonlogo{
+  display: none;
+}
+
+@media (max-width: 575px ) {
+  .leftSection{
+    width: auto;
+  }
+  .blackShortAmazonlogo{
+    display: inline-block;
+    height: 35px;
+    margin-top: 5px;
+  }
+
+  .blackFullAmazonlogo{
+    display: none;
+  }
+
 }
 
 .midSection {
@@ -54,10 +69,30 @@ leftSection, .midSection, .rightSection {
   font-size: 23px;
 }
 
+@media(max-width:1000px) {
+  .midSection{
+    font-size: 20px;
+    margin-right: 60px;
+  }
+
+  .itemsFrontPageLink{
+    font-size: 18px;
+  }
+}
+
+@media(max-width:575px){
+  .midSection{
+    margin-right: 5px;
+  }
+}
+
 .rightSection {
-  /* display: flex; */
-  /* align-items: start; */
-  /* justify-content: flex-end; */
-  text-align: end;
+  text-align: right;
   width: 150px;
+}
+
+@media(max-width:1000px){
+  .rightSection{
+    width: auto;
+  }
 }
